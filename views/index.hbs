@@ -1,0 +1,17 @@
+<html>
+
+  <header>
+
+  </header>
+
+  <ul>
+    {{#each item}}
+    <li>{{title}}</li><input type="checkbox" onclick="isDone()">
+    {{/each}}
+  </ul>
+
+  <br><br>
+
+  <input type="button" value="Add item" onclick="addItem()">
+
+</html>

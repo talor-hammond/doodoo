@@ -1,0 +1,23 @@
+<html>
+  <head>
+  
+  </head>
+
+  <header>
+  
+  </header>
+
+  <ul>
+    {{#each item}}
+    <li>{{title}}<input class="listItem" type="checkbox"></li>
+    {{/each}}
+  </ul>
+  
+  <form class="form" action="/app" method="post">
+  <input type="text" name="title">
+  <input type="submit" value="Add item">
+  </form>
+
+  
+
+</html>
