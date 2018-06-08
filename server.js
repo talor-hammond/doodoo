@@ -20,19 +20,17 @@ server.use(express.urlencoded({extended: false}))
 
 // FUNCTIONS:
 
+function pushRandomItem(arr) {
+  var randomIndex = Math.round(Math.random() * arr.length)
+  var randomObject = {
+    id: data.item.length + 1,
+    title: arr[randomIndex],
+    isDone: false
+  }
 
-  // data.item[id] 
-
-function isDone() {
-
- console.log("click")
-//   for (var i = 0; i < data.item.length; i++) {
-
-
-
-//   }
-
+  data.item.push(randomObject)
 }
+
 // ROUTES:
 server.get('/', function (req, res) {
 
@@ -46,22 +44,44 @@ server.get('/app', function (req, res) {
 
 })
 
+// CLICKING THE CHECKBOX
+server.post('/check', function (req, res) {
+  
+var idOfItem = Object.keys(req.body) // grabbing the id of the item selected...
+
+var newArray = data.item.filter(x => x.id != idOfItem) // creating a new array without the filtered item...
+
+data.item = newArray // assigning the new array to the item property of the data object
+
+// console.log(data)
+
+save(data, () => { // wrting local data to global data...
+   res.redirect('/app')
+ })
+
+})
+
+// ADDING AN ITEM
 server.post('/app', function (req, res) {
 
-  console.log(req.body.title)
-  var newItem = {
-    id: data.item.length,
+  var newItem = { // creating a new item with the properties required.
+    id: data.item.length + 1,
     title: req.body.title,
     isDone: false
   }
 
-  data.item.push(newItem)
+  data.item.push(newItem) // pushing newItem object to our item array.
 
-  save(data, ()=> {
-    res.redirect('/app')
+  save(data, () => {
+    if (Math.random() > .50) pushRandomItem(randomItems)
+
+    res.redirect('/app') // providing a redirect as a callback when the saving of the data is done.
   })
 
 })
+
+var randomItems = ['caviar', 'drugs','shoebox','special pendant', 'amulet of glory', 'crystal skull', 'more drugs']
+
 
 // EXPORTS:
 module.exports = server

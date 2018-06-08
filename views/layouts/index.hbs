@@ -9,7 +9,11 @@
 
   <ul>
     {{#each item}}
-    <li>{{title}}<input class="listItem" type="checkbox"></li>
+    <form id={{id}} action="/check" method="post">
+        <li>{{title}}
+          <input type="checkbox" name="{{id}}" onchange="document.getElementById({{id}}).submit()">
+        </li>
+      </form>
     {{/each}}
   </ul>
   
@@ -17,7 +21,5 @@
   <input type="text" name="title">
   <input type="submit" value="Add item">
   </form>
-
-  
 
 </html>
