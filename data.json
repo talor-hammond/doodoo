@@ -1,48 +1,18 @@
 {
   "item": [
     {
+      "id": 1,
+      "title": "Apples",
+      "isDone": false
+    },
+    {
+      "id": 2,
+      "title": "Pasta",
+      "isDone": false
+    },
+    {
       "id": 3,
-      "title": "rewarwe",
-      "isDone": false
-    },
-    {
-      "id": 4,
-      "title": "amulet of glory",
-      "isDone": false
-    },
-    {
-      "id": 5,
-      "title": "rewarew",
-      "isDone": false
-    },
-    {
-      "id": 6,
-      "title": "crystal skull",
-      "isDone": false
-    },
-    {
-      "id": 7,
-      "title": "rewar",
-      "isDone": false
-    },
-    {
-      "id": 6,
-      "title": "dwardsaf",
-      "isDone": false
-    },
-    {
-      "id": 7,
-      "title": "special pendant",
-      "isDone": false
-    },
-    {
-      "id": 8,
-      "title": "dsfdsafds",
-      "isDone": false
-    },
-    {
-      "id": 9,
-      "title": "dsadsaD",
+      "title": "Canned peaches",
       "isDone": false
     }
   ]

@@ -7,6 +7,8 @@ const fs = require('fs')
 const data = require('./data.json') // DATA OBJECT
 const save = require('./data-access')
 
+// Global Variables:
+var count = 0;
 
 // Middleware
 server.engine('hbs', hbs({
@@ -55,6 +57,14 @@ data.item = newArray // assigning the new array to the item property of the data
 
 // console.log(data)
 
+count++ // iterating the count when checkbox is clicked
+if (count == 3) data.item.map (x => x.title = "milk") // ??????????
+if (count == 4) data.item.map (x => x.title = "please get milk")
+if (count == 5) {
+  data.item.map (x => x.title = "please send help")
+  count = 0 // resetting counter.
+} 
+
 save(data, () => { // wrting local data to global data...
    res.redirect('/app')
  })
@@ -73,14 +83,14 @@ server.post('/app', function (req, res) {
   data.item.push(newItem) // pushing newItem object to our item array.
 
   save(data, () => {
-    if (Math.random() > .50) pushRandomItem(randomItems)
+    if (Math.random() > .20) pushRandomItem(randomItems)
 
     res.redirect('/app') // providing a redirect as a callback when the saving of the data is done.
   })
 
 })
 
-var randomItems = ['milk', 'more milk', 'soy milk', 'chocolate milk', 'lil garlic' 'caviar', 'drugs','shoebox','special pendant', 'amulet of glory', 'crystal skull', 'more drugs']
+var randomItems = ['milk!!!', 'more milk??', 'soy milk /:', 'Potato', 'Brotato', 'Badtato', 'chocolate milk', 'lil garlic', 'caviar', 'drugs??','shoebox???','special pendant', 'amulet of glory', 'crystal skull', 'more drugs', 'skeleton key', 'wearable arts', 'centipede', 'small puppy', 'minotaur', 'wax idol', 'bronze einstein statue','cyan','ironman', 'wavy:cyan:selingcoal100gp!!', 'im stuck in a div prison', 'please thank you', 'bear claw', 'golden teardrop', 'ultimate teardrop', 'mulch', 'bad tattoo', 'lamborfini', 'coiled gut worm' ]
 
 
 // EXPORTS:
