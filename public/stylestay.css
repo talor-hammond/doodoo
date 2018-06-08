@@ -1,0 +1,29 @@
+html, body {
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  height: 150px;
+  color: white;
+  background-color: #778472;
+  width: 100%;
+  margin-bottom: 50px;
+  top: 0;
+  position: fixed;
+}
+
+header h1 {
+  font-size: 80px;
+  text-align: center;
+}
+
+ul {
+
+}
+
+.container {
+  width: 60%;
+  align-content: center;
+}
+

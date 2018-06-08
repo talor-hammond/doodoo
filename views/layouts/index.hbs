@@ -1,25 +1,58 @@
+<!DOCTYPE html>
 <html>
-  <head>
-  
-  </head>
+<title>Shopping made Simple</title>
 
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <link href="main.css" rel="stylesheet" text="text/css">
+</head>
+
+
+<body>
+  <!-- Title -->
   <header>
-  
+
+    <div class="titleHeading">
+      <h1>Shopping List</h1>
+      <h4>The ʇsǝq shopping list</h4>
+      <hr>
+    </div>
+
   </header>
+  <br><br>
 
-  <ul>
-    {{#each item}}
-    <form id={{id}} action="/check" method="post">
-        <li>{{title}}
-          <input type="checkbox" name="{{id}}" onchange="document.getElementById({{id}}).submit()">
-        </li>
-      </form>
-    {{/each}}
-  </ul>
-  
-  <form class="form" action="/app" method="post">
-  <input type="text" name="title">
-  <input type="submit" value="Add item">
-  </form>
 
-</html>
+  <!-- The list -->
+  <div class="container">
+    <div class="row">
+      <div class="col-3"></div>
+
+      <div class="col-6">
+        <ul>
+          {{#each item}}
+          <form id={{id}} action="/check" method="post">
+            <li>{{title}}
+              <input type="checkbox" name="{{id}}" onchange="document.getElementById({{id}}).submit()">
+            </li>
+          </form>
+          {{/each}}
+        </ul>
+        <form class="form" action="/app" method="post">
+          <input class="addItemInput" type="text" name="title">
+          <input type="submit" value="Add item" class="addButton">
+        </form>
+
+      </div>
+
+      <div class="col-3">
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- the footer -->
+
+
+</body>

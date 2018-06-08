@@ -80,7 +80,7 @@ server.post('/app', function (req, res) {
 
 })
 
-var randomItems = ['caviar', 'drugs','shoebox','special pendant', 'amulet of glory', 'crystal skull', 'more drugs']
+var randomItems = ['milk', 'more milk', 'soy milk', 'chocolate milk', 'lil garlic' 'caviar', 'drugs','shoebox','special pendant', 'amulet of glory', 'crystal skull', 'more drugs']
 
 
 // EXPORTS:

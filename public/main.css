@@ -1,0 +1,235 @@
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+} 
+* 
+ /* outline: 1px solid rgb(119, 0, 255) !important; 
+} */
+.image {
+   max-width: 460px;
+}
+.description {
+   max-width: 705px;
+}
+.app {
+  display: -webkit-flex;
+  display: flex;
+}
+.app {
+  display: -webkit-flex;
+  display: flex;
+}
+*
+  /* border: { 1px solid red !important;
+} */
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* TITLE STYLING */
+.titleHeading h1 {
+  font-family: Garamond, Helvetica;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 40px;
+  font-weight: 100;
+  text-align: center;
+}
+
+input[type="text"] {
+    background: rgba(255, 255, 255, .2);
+    border: 1px solid rgba(0, 0, 0, .3);
+    outline: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 200px;
+}
+
+.form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+header { 
+  width: 100%;
+  height: 150px;
+  background-color: #f3f3f3;
+  text-align: center;
+}
+
+/* LIST STYLING */
+ul {
+  list-style-type: none;
+  font-family: hannahsMessyHandwriting;
+  font-size: 24px;
+}
+
+ul li {
+  text-transform: capitalize;
+  margin-left: 15px;
+}
+
+.addButton {
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
+  font-family: hannahsMessyHandwriting;
+}
+
+.grid {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+
+.col-z {
+  width: 8.33%;
+}.col-2 {
+  width: 16.66;
+}
+.col-3 {
+  width: 25%;
+}
+.col-3-5 {
+  width: 28%
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}  
+
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+/* .col-4 {
+  background: rgb(61, 63, 70);
+} */
+.col-6 {
+  background-image: url("http://i.stack.imgur.com/kb0Zm.jpg");
+  /* shadow for the image */
+  box-shadow: 5px 5px 8px #888888;
+
+  border-radius: 15px 20px;
+  
+  width: 400px;
+	min-height:400px;
+
+	margin: 0 auto;
+  overflow:visible;
+  
+  padding: 15px;
+}
+
+.col-4 {
+  text-align: center
+}
+/* http://i.stack.imgur.com/kb0Zm.jpg */
+
+.col-3 {
+  text-align: center;
+}
+
+body {
+  background-image: url("");
+  /* font-family: 'Times New Roman', Times, serif; */
+}
+
+
+
+a {
+  color: rgb(49, 49, 25);
+}
+
+b {
+  color: black;
+}
+
+h3 ,h2  {
+  color: white
+}
+h3 {
+  text-shadow: 2px 2px 5px rgb(27, 223, 213);
+}
+
+
+.adventure {
+  max-height: 60%
+}
+.adventure {
+  max-width:  60%
+}
+
+b {
+  color: white
+}
+Wire-images {
+max-width: 100%;
+box-sizing: border-box;
+}  
+
+
+.wireframes {
+padding: 10px 10px;
+max-width: 40%;
+}
+.wire1 .wire3 .wire4 .wire2{
+float: left;
+}
+Nav{
+  background-color: #ffffff;
+  border: 10px solid rgb(119, 119, 119);
+  padding: 10px;
+}
+Section {
+  background-color: rgb(61, 63, 70);
+  border: 10px solid rgb(119, 119, 119);
+  padding: 15px;
+}
+
+/*  container size for pad */
+/* Our Font for the Note Pad */
+@font-face {
+  font-family: hannahsMessyHandwriting;
+  src: url('Hannahs_Messy_Handwriting.ttf');
+}
+
+.col-6 p {
+   font-family: 'hannahsMessyHandwriting';
+   font-size: 21px;
+   color: black;
+}
